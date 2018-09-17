@@ -2,11 +2,12 @@ version: '3.1'
 services:
 
   db:
-    image: postgres:10
+    image: practicalsql:latest
+    build: .
     environment:
       POSTGRESQL_PASSWORD: example
     volumes:
-      - .:/code
+      - ..:/code
 
   pgadmin:
     image: dpage/pgadmin4:3
